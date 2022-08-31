@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>TypeScript</title>
+      <link href="/2022/08/31/TypeScript/"/>
+      <url>/2022/08/31/TypeScript/</url>
+      
+        <content type="html"><![CDATA[<h2 id="TypeScript安装"><a href="#TypeScript安装" class="headerlink" title="TypeScript安装"></a>TypeScript安装</h2><h3 id="NPM-安装-TypeScript"><a href="#NPM-安装-TypeScript" class="headerlink" title="NPM 安装 TypeScript"></a>NPM 安装 TypeScript</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure><h3 id="安装-typescript"><a href="#安装-typescript" class="headerlink" title="安装 typescript"></a>安装 typescript</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g typescript</span><br></pre></td></tr></table></figure><p>安装完成后我们可以使用 <strong>tsc</strong> 命令来执行 TypeScript 的相关代码，以下是查看版本号：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tsc -v</span><br><span class="line">Version 3.2.2</span><br></pre></td></tr></table></figure><h2 id="Hello-World-ts"><a href="#Hello-World-ts" class="headerlink" title="Hello World.ts"></a>Hello World.ts</h2><p>新建一个 Hello World.ts 的文件</p><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="attr">message</span>:<span class="built_in">string</span> = <span class="string">&quot;Hello World&quot;</span> </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(message)</span><br></pre></td></tr></table></figure><p>通常我们使用 <strong>.ts</strong> 作为 TypeScript 代码文件的扩展名。</p><p>然后执行以下命令将 TypeScript 转换为 JavaScript 代码:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsc app.ts</span><br></pre></td></tr></table></figure><p>这时候在当前目录下（与 app.ts 同一目录）就会生成一个 Hello World.js 文件，代码如下：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> message = <span class="string">&quot;Hello World&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(message);</span><br></pre></td></tr></table></figure><p>在html 文件中导入js文件，去浏览器控制台可以看到输出显示了 Hello World</p><p>或者在控制台直接输入：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node Hello World.js</span><br><span class="line">Hello World  // 这个方法可以直接输出内容</span><br></pre></td></tr></table></figure><p>也可以同时编译多个文件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsc file1.ts file2.ts file3.ts</span><br></pre></td></tr></table></figure><h3 id="tsc-常用编译参数"><a href="#tsc-常用编译参数" class="headerlink" title="tsc 常用编译参数"></a>tsc 常用编译参数</h3><table><thead><tr><th align="center">序号</th><th align="center">编译参数说明</th></tr></thead><tbody><tr><td align="center">1.</td><td align="center"><strong>–help</strong>显示帮助信息</td></tr><tr><td align="center">2.</td><td align="center"><strong>–module</strong>载入扩展模块</td></tr><tr><td align="center">3.</td><td align="center"><strong>–target</strong>设置 ECMA 版本</td></tr><tr><td align="center">4.</td><td align="center"><strong>–declaration</strong>额外生成一个 .d.ts 扩展名的文件。<code>tsc ts-hw.ts --declaration</code>以上命令会生成 ts-hw.d.ts、ts-hw.js 两个文件。</td></tr><tr><td align="center">5.</td><td align="center"><strong>–removeComments</strong>删除文件的注释</td></tr><tr><td align="center">6.</td><td align="center"><strong>–out</strong>编译多个文件并合并到一个输出的文件</td></tr><tr><td align="center">7.</td><td align="center"><strong>–sourcemap</strong>生成一个 sourcemap (.map) 文件。sourcemap 是一个存储源代码与编译代码对应位置映射的信息文件。</td></tr><tr><td align="center">8.</td><td align="center"><strong>–module noImplicitAny</strong>在表达式和声明上有隐含的 any 类型时报错</td></tr><tr><td align="center">9.</td><td align="center"><strong>–watch</strong>在监视模式下运行编译器。会监视输出文件，在它们改变时重新编译。</td></tr></tbody></table><h2 id="TypeScript-保留关键字"><a href="#TypeScript-保留关键字" class="headerlink" title="TypeScript 保留关键字"></a>TypeScript 保留关键字</h2><table><thead><tr><th>break</th><th>as</th><th>catch</th><th>switch</th></tr></thead><tbody><tr><td>case</td><td>if</td><td>throw</td><td>else</td></tr><tr><td>var</td><td>number</td><td>string</td><td>get</td></tr><tr><td>module</td><td>type</td><td>instanceof</td><td>typeof</td></tr><tr><td>public</td><td>private</td><td>enum</td><td>export</td></tr><tr><td>finally</td><td>for</td><td>while</td><td>void</td></tr><tr><td>null</td><td>super</td><td>this</td><td>new</td></tr><tr><td>in</td><td>return</td><td>true</td><td>false</td></tr><tr><td>any</td><td>extends</td><td>static</td><td>let</td></tr><tr><td>package</td><td>implements</td><td>interface</td><td>function</td></tr><tr><td>do</td><td>try</td><td>yield</td><td>const</td></tr><tr><td>continue</td><td></td><td></td><td></td></tr></tbody></table><h2 id="空白和换行"><a href="#空白和换行" class="headerlink" title="空白和换行"></a>空白和换行</h2><p>TypeScript 会忽略程序中出现的空格、制表符和换行符。</p><p>空格、制表符通常用来缩进代码，使代码易于阅读和理解。</p><h2 id="TypeScript-区分大小写"><a href="#TypeScript-区分大小写" class="headerlink" title="TypeScript 区分大小写"></a>TypeScript 区分大小写</h2><p>TypeScript 区分大写和小写字符。</p><h2 id="分号是可选的"><a href="#分号是可选的" class="headerlink" title="分号是可选的"></a>分号是可选的</h2><p>每行指令都是一段语句，你可以使用分号或不使用， 分号在 TypeScript 中是可选的，<strong>建议使用</strong>。</p><p>以下代码都是合法的：</p><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Runoob&quot;</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Google&quot;</span>);</span><br></pre></td></tr></table></figure><p>如果语句写在同一行则一定需要使用分号来分隔，否则会报错，如：</p><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Runoob&quot;</span>);<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Google&quot;</span>);</span><br></pre></td></tr></table></figure><h2 id="TypeScript-注释"><a href="#TypeScript-注释" class="headerlink" title="TypeScript 注释"></a>TypeScript 注释</h2><p>注释是一个良好的习惯，虽然很多程序员讨厌注释，但还是建议你在每段代码写上文字说明。</p><p>注释可以提高程序的可读性。</p><p>注释可以包含有关程序一些信息，如代码的作者，有关函数的说明等。</p><p>编译器会忽略注释。</p><h2 id="TypeScript-支持两种类型的注释"><a href="#TypeScript-支持两种类型的注释" class="headerlink" title="TypeScript 支持两种类型的注释"></a>TypeScript 支持两种类型的注释</h2><ul><li><strong>单行注释 ( &#x2F;&#x2F; )</strong> − 在 &#x2F;&#x2F; 后面的文字都是注释内容。</li><li><strong>多行注释 (&#x2F;* *&#x2F;)</strong> − 这种注释可以跨越多行。</li></ul><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这是一个单行注释</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment"> 这是一个多行注释 </span></span><br><span class="line"><span class="comment"> 这是一个多行注释 </span></span><br><span class="line"><span class="comment"> 这是一个多行注释 </span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure><h2 id="TypeScript-与面向对象"><a href="#TypeScript-与面向对象" class="headerlink" title="TypeScript 与面向对象"></a>TypeScript 与面向对象</h2><p>面向对象是一种对现实世界理解和抽象的方法。</p><p>TypeScript 是一种面向对象的编程语言。</p><p>面向对象主要有两个概念：对象和类。</p><ul><li><strong>对象</strong>：对象是类的一个实例（<strong>对象不是找个女朋友</strong>），有状态和行为。例如，一条狗是一个对象，它的状态有：颜色、名字、品种；行为有：摇尾巴、叫、吃等。</li><li><strong>类</strong>：类是一个模板，它描述一类对象的行为和状态。</li><li><strong>方法</strong>：方法是类的操作的实现步骤。</li></ul><p>TypeScript 面向对象编程实例：</p><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Site</span> &#123; </span><br><span class="line">   <span class="title function_">name</span>():<span class="built_in">void</span> &#123; </span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Runoob&quot;</span>) </span><br><span class="line">   &#125; </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="title class_">Site</span>(); </span><br><span class="line">obj.<span class="title function_">name</span>();</span><br></pre></td></tr></table></figure><p>以上实例定义了一个类 <strong>Site</strong>，该类有一个方法 **name()**，该方法在终端上输出字符串 <strong>Runoob</strong>。</p><p><strong>new</strong> 关键字创建类的对象，该对象调用方法 **name()**。</p><p>编译后生成的 JavaScript 代码如下：</p><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="title class_">Site</span> = <span class="comment">/** <span class="doctag">@class</span> */</span> (<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">Site</span>(<span class="params"></span>) &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title class_">Site</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">name</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Runoob&quot;</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">Site</span>;</span><br><span class="line">&#125;());</span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="title class_">Site</span>();</span><br><span class="line">obj.<span class="title function_">name</span>();</span><br></pre></td></tr></table></figure><p>执行以上 JavaScript 代码，输出结果如下:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Runoob</span><br></pre></td></tr></table></figure><h2 id="TypeScript-基础类型"><a href="#TypeScript-基础类型" class="headerlink" title="TypeScript 基础类型"></a>TypeScript 基础类型</h2><table><thead><tr><th align="left">数据类型</th><th align="left">关键字</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">任意类型</td><td align="left">any</td><td align="left">声明为 any 的变量可以赋予任意类型的值。</td></tr><tr><td align="left">数字类型</td><td align="left">number</td><td align="left">双精度 64 位浮点值。它可以用来表示整数和分数。<br><code>let binaryLiteral: number = 0b1010; // 二进制</code><br><code>let octalLiteral: number = 0o744;    // 八进制</code><br><code>let decLiteral: number = 6;    // 十进制</code> <br><code>let hexLiteral: number = 0xf00d;    // 十六进制</code></td></tr><tr><td align="left">字符串类型</td><td align="left">string</td><td align="left">一个字符系列，使用单引号（ ‘ ）或双引号（ “ ）来表示字符串类型。反引号（）来定义多行文本和内嵌表达式。<br><code>let name: string = &quot;Runoob&quot;;</code> <br><code>let years: number = 5;</code><br><code>let words: string = 您好，今年是 $&#123; name &#125; 发布 $&#123; years + 1&#125; 周年;</code></td></tr><tr><td align="left">布尔类型</td><td align="left">boolean</td><td align="left">表示逻辑值：true 和 false。<br><code>let flag: boolean = true;</code></td></tr><tr><td align="left">数组类型</td><td align="left">无</td><td align="left">声明变量为数组。<br><code>// 在元素类型后面加上[] </code><br><code>let arr: number[] = [1, 2]; </code><br><code>// 或者使用数组泛型 </code><br><code>let arr: Array&lt;number&gt; = [1, 2];</code></td></tr><tr><td align="left">元组</td><td align="left">无</td><td align="left">元组类型用来表示已知元素数量和类型的数组，各元素的类型不必相同，对应位置的类型需要相同。<br><code>let x: [string, number]; </code><br><code>x = [&#39;Runoob&#39;, 1];  // 运行正常    </code><br><code> x = [1, &#39;Runoob&#39;];  // 报错</code>  <br><code> console.log(x[0]);  // 输出 Runoob</code></td></tr><tr><td align="left">枚举</td><td align="left">enum</td><td align="left">枚举类型用于定义数值集合。<br><code>enum Color &#123;Red, Green, Blue&#125;; </code><br><code>let c: Color = Color.Blue;</code><br><code> console.log(c);    // 输出 2</code></td></tr><tr><td align="left">void</td><td align="left">void</td><td align="left">用于标识方法返回值的类型，表示该方法没有返回值。<br><code>function hello(): void &#123;    </code><br><code>    alert(&quot;Hello Runoob&quot;);</code><br><code>&#125;</code></td></tr><tr><td align="left">null</td><td align="left">null</td><td align="left">表示对象值缺失。</td></tr><tr><td align="left">undefined</td><td align="left">undefined</td><td align="left">用于初始化变量为一个未定义的值</td></tr><tr><td align="left">never</td><td align="left">never</td><td align="left">never 是其它类型（包括 null 和 undefined）的子类型，代表从不会出现的值。</td></tr></tbody></table>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> TypeScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>HTML基础篇</title>
       <link href="/2022/08/27/HTML%E5%9F%BA%E7%A1%80%E7%AF%87/"/>
       <url>/2022/08/27/HTML%E5%9F%BA%E7%A1%80%E7%AF%87/</url>
@@ -31,6 +50,12 @@
       
       
       
+        <tags>
+            
+            <tag> MySql </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -47,25 +72,6 @@
         <tags>
             
             <tag> 代码 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>测试文章</title>
-      <link href="/2022/08/23/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
-      <url>/2022/08/23/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 我的第一个文章 </tag>
             
         </tags>
       
@@ -93,6 +99,25 @@
     
     
     <entry>
+      <title>测试文章</title>
+      <link href="/2022/08/23/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
+      <url>/2022/08/23/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 我的第一个文章 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2022/08/23/hello-world/"/>
       <url>/2022/08/23/hello-world/</url>
@@ -100,6 +125,12 @@
         <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> Hello World </tag>
+            
+        </tags>
       
     </entry>
     

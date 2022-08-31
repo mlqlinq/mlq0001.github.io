@@ -2,9 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mlq0001.github.io/2022/08/23/hello-world/</loc>
+    
+    <lastmod>2022-08-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://mlq0001.github.io/2022/08/26/MYSql/</loc>
     
-    <lastmod>2022-08-27</lastmod>
+    <lastmod>2022-08-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlq0001.github.io/2022/08/31/TypeScript/</loc>
+    
+    <lastmod>2022-08-31</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -47,15 +65,6 @@
   </url>
   
   <url>
-    <loc>https://mlq0001.github.io/2022/08/23/hello-world/</loc>
-    
-    <lastmod>2022-08-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://mlq0001.github.io/categories/index.html</loc>
     
     <lastmod>2022-08-24</lastmod>
@@ -85,29 +94,50 @@
 
   <url>
     <loc>https://mlq0001.github.io/</loc>
-    <lastmod>2022-08-27</lastmod>
+    <lastmod>2022-08-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://mlq0001.github.io/tags/HTML%E5%9F%BA%E7%A1%80%E7%AF%87/</loc>
-    <lastmod>2022-08-27</lastmod>
+    <loc>https://mlq0001.github.io/tags/MySql/</loc>
+    <lastmod>2022-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mlq0001.github.io/tags/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%96%87%E7%AB%A0/</loc>
-    <lastmod>2022-08-27</lastmod>
+    <loc>https://mlq0001.github.io/tags/HTML%E5%9F%BA%E7%A1%80%E7%AF%87/</loc>
+    <lastmod>2022-08-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlq0001.github.io/tags/TypeScript/</loc>
+    <lastmod>2022-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://mlq0001.github.io/tags/%E4%BB%A3%E7%A0%81/</loc>
-    <lastmod>2022-08-27</lastmod>
+    <lastmod>2022-08-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlq0001.github.io/tags/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%96%87%E7%AB%A0/</loc>
+    <lastmod>2022-08-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mlq0001.github.io/tags/Hello-World/</loc>
+    <lastmod>2022-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
